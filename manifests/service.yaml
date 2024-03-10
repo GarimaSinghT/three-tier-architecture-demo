@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: AKS-demo
+  namespace: namespace-workflow-1710054040404
+spec:
+  type: LoadBalancer
+  selector:
+    app: AKS-demo
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
